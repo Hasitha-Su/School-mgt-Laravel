@@ -30,5 +30,5 @@ Route::get('/post/{id}', function($id) {
 
 //multiple routing parameters
 Route::get('/post/{id}/{name}', function($id,$name) {  
-    return "id number is : ". $id ." and ".$name;   
+    return "id number is : ". $id ." and name is ".$name;   
 });  
