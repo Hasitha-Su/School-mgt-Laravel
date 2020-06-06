@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/example', function () {      
     return "Hello javaTpoint";  
 }); 
+
+Route::get('/post/{id}', function($id) {  
+    return "id number is : ". $id;   
+});  
+
+Route::get('/post/{id}/{name}', function($id,$name) {  
+    return "id number is : ". $id ." and ".$name;   
+});  
