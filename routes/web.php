@@ -37,3 +37,11 @@ Route::get('/post/{id}/{name}', function($id,$name) {
 Route::get('user/{name?}', function ($name=null) {  
     return $name;  
 }); 
+
+//named routes
+Route::get('student/details/example',array   
+('as'=>'student.details',function()  
+{  
+   $url=route('student.details');  
+   return "The url is : " .$url;  
+}));
