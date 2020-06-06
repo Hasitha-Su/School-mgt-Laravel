@@ -32,3 +32,8 @@ Route::get('/post/{id}', function($id) {
 Route::get('/post/{id}/{name}', function($id,$name) {  
     return "id number is : ". $id ." and name is ".$name;   
 });  
+
+//optional parameters
+Route::get('user/{name?}', function ($name=null) {  
+    return $name;  
+}); 
