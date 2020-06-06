@@ -13,18 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//default router
 Route::get('/', function () {
     return view('welcome');
 });
 
+//another router
 Route::get('/example', function () {      
     return "Hello javaTpoint";  
 }); 
 
+//routing parameters
 Route::get('/post/{id}', function($id) {  
     return "id number is : ". $id;   
 });  
 
+//multiple routing parameters
 Route::get('/post/{id}/{name}', function($id,$name) {  
     return "id number is : ". $id ." and ".$name;   
 });  
