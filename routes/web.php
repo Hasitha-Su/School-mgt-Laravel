@@ -39,9 +39,28 @@ Route::get('user/{name?}', function ($name=null) {
 }); 
 
 //named routes
-Route::get('student/details/example',array   
-('as'=>'student.details',function()  
+Route::get('student/latest/example',array   
+('as'=>'student.latest',function()  
 {  
-   $url=route('student.details');  
+   $url=route('student.latest');  
    return "The url is : " .$url;  
 }));
+
+
+//Navigating from one route to another using named routes
+Route::Get('/student_view',function()  
+{  
+  return view('student');  
+});  
+
+
+Route::get('student/details',function()  
+{  
+  $url=route('student.details');  
+ return $url;  
+})->name('student.details');
+
+//middleware auth added
+Route::get('admin/profile', function () {
+    //
+})->middleware('checkAge');

@@ -1,0 +1,15 @@
+
+
+student
+    enroll to subjects
+    
+parent
+    view student marks
+    view attendance
+
+admin / principal
+    add teachers,parents,students
+
+teacher
+    add marks
+
