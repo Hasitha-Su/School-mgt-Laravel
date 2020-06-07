@@ -67,5 +67,8 @@ class Kernel extends HttpKernel
         //check age middleware
         'checkAge' => \App\Http\Middleware\CheckAge::class,  
 
+        'First' => \App\Http\Middleware\FirstMiddleware::class,  
+        'Second' => \App\Http\Middleware\SecondMiddleware::class,  
+
     ];
 }

@@ -64,3 +64,17 @@ Route::get('student/details',function()
 Route::get('admin/profile', function () {
     //
 })->middleware('checkAge');
+
+//Assigning Middleware to Route
+Route::get('profile', [
+    'middleware' => 'auth',
+    'uses' => 'TestController@showProfile'
+]);
+
+Route::get('/testcontroller/path',[
+    'middleware' => 'First',
+    'uses' => 'TestController@showPath'
+ ]);
+
+//student controller
+Route::resource('photos', 'PhotoController'); 
