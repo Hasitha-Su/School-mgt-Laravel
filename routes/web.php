@@ -77,4 +77,12 @@ Route::get('/testcontroller/path',[
  ]);
 
 //student controller
-Route::resource('photos', 'PhotoController'); 
+// Route::resource('student', 'StudentController');
+
+//student registration test
+Route::get('/student/register',function() {
+    return view('stdreg');
+    // return "The Std reg";
+});
+
+Route::post('/studentReg/register',array('uses'=>'StudentRegistration@postRegister'));
