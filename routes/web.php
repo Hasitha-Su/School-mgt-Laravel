@@ -90,3 +90,8 @@ Route::post('/studentReg/register',array('uses'=>'StudentRegistration@postRegist
 //For cookies
 Route::get('/cookie/set','CookieController@setCookie');
 Route::get('/cookie/get','CookieController@getCookie');
+
+//test view
+Route::get('/test', function() {
+    return view('test',["name" => "Virat Gandhi" ]);
+ });
